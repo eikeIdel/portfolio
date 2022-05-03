@@ -1,14 +1,29 @@
-export default function Home() {
+import Header from './components/Header';
+import HomeContent from './components/Home/HomeContent';
+import HomeSidepanel from './components/Home/HomeSidepanel';
+import second from './components/Home/HomeSidepanel';
+
+export default function Main() {
   return (
-    <div className="wrapper h-screen w-screen flex justify-center items-center">
-      <div className="main-container w-full m-5">
-        <div className='header rounded-lg shadow-inner w-[50%] h-[20vh] mt-[3vh] ml-[2vw]  bg-[#9EC1A3]'>
+    <div className="font-mono flex justify-center items-center h-screen">
+      <div className="main-layout-grid-container h-[90%] w-[90%]">
+        <div className='header rounded-lg shadow-inner   bg-[#9EC1A3]'>
+          <div className="header-subcontainer">
+            <Header />
+          </div>
         </div>
 
-        <div className="sidebar rounded-lg shadow-inner w-[90vw] h-[70vh] mt-[-4vh] z-10 bg-[#b7cba8] ">
-
+        <div className="content rounded-lg shadow-inner  bg-[#B7D1B3]">
+          <div className="content-subcontainer">
+            <HomeContent />
+          </div>
         </div>
-        <div className="content rounded-lg shadow-inner w-[62.5] h-[92vh]  mt-[-89vh] ml-[36vw] z-20 bg-[#B7D1B3]"></div>
+        <div className="sidepanel rounded-lg shadow-inner  bg-[#b7cba8] ">
+          <div className="sidepanel-subcontainer">
+            <HomeSidepanel />
+          </div>
+        </div>
+
       </div>
     </div>
   );

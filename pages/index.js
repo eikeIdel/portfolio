@@ -24,12 +24,12 @@ export default function Main() {
 
         <div className="content  ">
           <div className="content-subcontainer h-full m-8 flex flex-col items-center">
-            <HomeContent />
+            {headerSelection.home && <HomeContent />}
           </div>
         </div>
         <div className="sidepanel ">
           <div className="sidepanel-subcontainer h-full m-8  flex flex-col items-center">
-            <HomeSidepanel />
+            {headerSelection.home && <HomeSidepanel />}
             {console.log(headerSelection)}
           </div>
         </div>

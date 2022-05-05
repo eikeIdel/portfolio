@@ -1,14 +1,39 @@
-export default function Home() {
+//react
+import { useState } from 'react';
+//components
+import Header from './components/Header';
+import HomeContent from './components/Home/HomeContent';
+import HomeSidepanel from './components/Home/HomeSidepanel';
+
+
+
+export default function Main() {
+  const [headerSelection, setHeaderSelection] = useState({
+    home: true,
+    projects: false,
+    contacts: false
+  });
   return (
-    <div className="wrapper h-screen w-screen flex justify-center items-center">
-      <div className="main-container w-full m-5">
-        <div className='header rounded-lg shadow-inner w-[50%] h-[20vh] mt-[3vh] ml-[2vw]  bg-[#9EC1A3]'>
+    <div className="font-mono flex justify-center items-center h-screen">
+      <div className="main-layout-grid-container h-[90%] w-[90%]">
+        <div className='header'>
+          <div className="header-subcontainer">
+            <Header setHeaderSelection={setHeaderSelection} headerSelection={headerSelection} />
+          </div>
         </div>
 
-        <div className="sidebar rounded-lg shadow-inner w-[90vw] h-[70vh] mt-[-4vh] z-10 bg-[#b7cba8] ">
-
+        <div className="content  ">
+          <div className="content-subcontainer h-full m-8 flex flex-col items-center">
+            {headerSelection.home && <HomeContent />}
+          </div>
         </div>
-        <div className="content rounded-lg shadow-inner w-[62.5] h-[92vh]  mt-[-89vh] ml-[36vw] z-20 bg-[#B7D1B3]"></div>
+        <div className="sidepanel ">
+          <div className="sidepanel-subcontainer h-full m-8  flex flex-col items-center">
+            {headerSelection.home && <HomeSidepanel />}
+            {console.log(headerSelection)}
+          </div>
+        </div>
+
       </div>
     </div>
   );

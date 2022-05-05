@@ -5,9 +5,13 @@
 }
 
 .header {
+
     margin-top: 2rem;
     margin-left: 2rem;
     z-index: 10;
+    background: #9EC1A3;
+    box-shadow: inset 4px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 }
 
 .header-subcontainer {
@@ -19,6 +23,9 @@
     margin-left: -2rem;
     grid-row: 2 span;
     z-index: 30;
+    background: #B7D1B3;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), inset 5px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 
 }
 
@@ -28,6 +35,9 @@
     margin-top: -2rem;
     margin-bottom: 2em;
     z-index: 20;
+    background: #CFE0C3;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1), inset 4px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 }
 
 .sidepanel-subcontainer {

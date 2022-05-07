@@ -1,13 +1,13 @@
 //react
 import { useState, useEffect } from 'react';
 //components
+import MobileHeader from '../components/Header/MobileHeader';
 import DesktopHeader from '../components/Header/DesktopHeader';
 import HomeContent from '../components/Home/HomeContent';
 import HomeSidepanel from '../components/Home/HomeSidepanel';
 //hooks
 import useClientWindow from '../hooks/useClientWindow.js';
-//modules
-import { Turn as Hamburger } from 'hamburger-react';
+
 
 
 export default function Main() {
@@ -40,6 +40,7 @@ export default function Main() {
         </div>
         <div className="sidepanel m-1">
           <div className="sidepanel-subcontainer sm:h-full sm:m-8 flex flex-col items-center">
+            {mobileScreen && <MobileHeader headerSelection={headerSelection} setHeaderSelection={setHeaderSelection} />}
             {headerSelection.home && <HomeSidepanel />}
 
           </div>

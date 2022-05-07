@@ -1,7 +1,7 @@
 function HomeContent() {
     return (
-        <div className="">
-            <div className="px-16 pt-16">
+        <div className="text-xs space-y-2 p-3 sm:text-base">
+            <div className=" sm:px-16 sm:pt-16">
                 <h1 className="text-center underline">Experience</h1>
                 <h2 className="font-bold">Web Developer</h2>
                 <h3 className="">formly.ai</h3>
@@ -19,7 +19,7 @@ function HomeContent() {
                     <li className="">deployment of web application on heroku</li>
                 </ul>
             </div>
-            <div className="px-16 pt-16">
+            <div className="sm:px-16 sm:pt-16">
                 <h1 className="text-center underline">Education</h1>
 
                 <h2 className="font-bold">Web Developer</h2>

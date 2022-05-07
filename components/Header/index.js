@@ -6,7 +6,7 @@ function Header({ setHeaderSelection, headerSelection }) {
         newSelection[clickedBtn] = true;
         setHeaderSelection(newSelection);
     }
-    console.log(headerSelection.home);
+
     return (
         <div className='h-full flex items-center divide-x-2 divide-black text-xl text-[#303030] '>
             <button className={`px-4 hover:text-[#005500] ${headerSelection.home && 'underline text-[#005500]'}`} onClick={() => { handleClick('home'); }}>Home</button>

@@ -24,15 +24,21 @@
     background: #CFE0C3;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1), inset 4px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+
 }
 
 .sidepanel-subcontainer {}
 
 @media only screen and (min-width: 600px) {
     .main-layout-container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         display: grid;
         grid-template-columns: 0.7fr 1fr;
         grid-template-rows: 0.12fr 0.88fr;
+        height: 95vh;
+
+
     }
 
     .header {
@@ -67,7 +73,7 @@
         margin-top: -2rem;
         margin-bottom: 2em;
         z-index: 20;
-
+        height: 100%;
         box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1), inset 4px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
     }

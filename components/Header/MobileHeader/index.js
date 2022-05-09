@@ -16,12 +16,12 @@ function MobileHeader({ setHeaderSelection, headerSelection }) {
 
     return (
         <>
-            <div className={`header transistion duration-200 ease-in-out  absolute w-full flex justify-start pt-1 ${isOpen ? 'bg-[#9EC1A3] top-0' : '-top-6'}`} >
+            <div className={`header transistion duration-200 ease-in-out  absolute w-full flex justify-start p-2  ${isOpen ? 'bg-[#9EC1A3] top-0' : '-top-2'}`} >
                 {isOpen && <Header setHeaderSelection={setHeaderSelection} headerSelection={headerSelection} className="p-2" />}
 
 
             </div>
-            <div className=" absolute -mt-1 mr-2 right-0">
+            <div className=" absolute top-1 right-2">
                 <Hamburger toggled={isOpen} toggle={setOpen} size={20} direction="right" />
 
             </div>

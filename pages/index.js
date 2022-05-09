@@ -20,10 +20,10 @@ export default function Main() {
   });
   //get client window size: clientWindow = {window.innerWidth,window.innerHeight}
   const clientWindow = useClientWindow();
-
+  //update state when window changes (usually initial load only)
   useEffect(() => {
     setMobileScreen(clientWindow.width < 640 ? true : false);
-    console.log(mobileScreen);
+    console.log({ mobileScreen });
   }, [clientWindow]);
 
   return (
@@ -33,13 +33,13 @@ export default function Main() {
         {!mobileScreen && <DesktopHeader headerSelection={headerSelection} setHeaderSelection={setHeaderSelection} />}
 
         <div className="content">
-          {/* extra subcontainer is necessary to center content inside the overlapping main divs */}
-          <div className="content-subcontainer sm:h-full sm:m-8 flex flex-col items-center">
+          {/* extra subcontainer is necessary to center content inside the overlapping parents */}
+          <div className="content-subcontainer sm:m-8 flex flex-col items-center">
             {headerSelection.home && <HomeContent />}
           </div>
         </div>
         <div className="sidepanel m-1">
-          <div className="sidepanel-subcontainer sm:h-full sm:m-8 flex flex-col items-center">
+          <div className="sidepanel-subcontainer h-full sm:m-8 flex flex-col justify-center">
             {mobileScreen && <MobileHeader headerSelection={headerSelection} setHeaderSelection={setHeaderSelection} />}
             {headerSelection.home && <HomeSidepanel />}
 

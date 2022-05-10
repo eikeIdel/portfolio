@@ -1,28 +1,29 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 //SSR causes Error when using "window" . This hook updated the state only on the client side.
 export default function useClientWindow() {
-    const [clientWindow, setClientWindow] = useState({ width: undefined, height: undefined });
+  const [clientWindow, setClientWindow] = useState({
+    width: undefined,
+    height: undefined,
+  });
 
-    useEffect(() => {
+  useEffect(() => {
+    function handleResize() {
+      setClientWindow({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
 
-        function handleResize() {
-            setClientWindow({
-                width: window.innerWidth,
-                height: window.innerHeight
-            });
-        }
+    //add event listener
+    window.addEventListener("resize", handleResize);
+    //call handleResize so the state get updated with initial window size
+    handleResize();
 
-        //add event listener
-        window.addEventListener('resize', handleResize);
-        //call handleResize so the state get updated with initial window size
-        handleResize();
-
-        return () => {
-            window.removeEventListener('resise', handleResize);
-        };
-    }, []);
-    // console.log(clientWindow);
-    return clientWindow;
+    return () => {
+      window.removeEventListener("resise", handleResize);
+    };
+  }, []);
+  // console.log(clientWindow);
+  return clientWindow;
 }
-

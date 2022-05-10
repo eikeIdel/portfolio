@@ -7,9 +7,6 @@ import { Turn as Hamburger } from "hamburger-react";
 
 function MobileHeader({ setHeaderSelection, headerSelection }) {
   const [isOpen, setOpen] = useState(false);
-  useEffect(() => {
-    setOpen(false);
-  }, [headerSelection]);
 
   return (
     <>
@@ -22,7 +19,6 @@ function MobileHeader({ setHeaderSelection, headerSelection }) {
           <Header
             setHeaderSelection={setHeaderSelection}
             headerSelection={headerSelection}
-            className="p-2"
           />
         )}
       </div>

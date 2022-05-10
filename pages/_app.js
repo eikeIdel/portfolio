@@ -1,5 +1,7 @@
+//CSS
 import "../styles/globals.css";
 import "../styles/main-layout.css";
+//components
 import Header from "../components/MainLayout/Header";
 
 function MyApp({ Component, pageProps }) {

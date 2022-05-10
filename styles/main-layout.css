@@ -2,9 +2,17 @@
   display: flex;
   flex-direction: column-reverse;
   height: 100vh;
+  width: 100vw;
 }
 
 .header {
+  order: 1;
+  height: 3rem;
+  margin-bottom: -3rem;
+  background: #9ec1a3;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
 .header-subcontainer {
@@ -50,6 +58,7 @@
     background: #9ec1a3;
     box-shadow: inset 4px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    order: 0;
   }
 
   .header-subcontainer {

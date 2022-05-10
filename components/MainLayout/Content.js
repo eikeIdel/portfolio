@@ -1,10 +1,10 @@
 import React from "react";
 
-function Content({ PageComponent }) {
+function Content({ PageContent }) {
   return (
     <div className="content">
       <div className="content-subcontainer m-2 sm:m-8 flex flex-col items-center">
-        <PageComponent />
+        <PageContent />
       </div>
     </div>
   );

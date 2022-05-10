@@ -1,10 +1,10 @@
 import React from "react";
 
-function Sidepanel({ PageComponent }) {
+function Sidepanel({ PageSidepanel }) {
   return (
     <div className="sidepanel">
       <div className="sidepanel-subcontainer h-full sm:m-8 flex flex-col justify-center sm:justify-start">
-        <PageComponent />
+        <PageSidepanel />
       </div>
     </div>
   );

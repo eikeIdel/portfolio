@@ -21,13 +21,13 @@ function Header() {
     setMobileScreen(clientWindow.width < 640 ? true : false);
   }, [clientWindow]);
 
-  const burgerAnimation = clientWindow && isOpen ? "top-0" : null;
+  const burgerAnimation = mobileScreen && !isOpen ? "-mt-6" : "-mb-16 p-2";
 
   return (
     <div className={`header `}>
       <div className={`header-subcontainer `}>
         <div
-          className={`h-full flex items-center divide-x-2 divide-[#303030] ${burgerAnimation} sm:bg-transparent sm:text-xl text-[#303030] `}
+          className={`h-full flex items-center divide-x-2 bg-[#9ec1a3] divide-[#303030] ${burgerAnimation} sm:bg-transparent sm:text-xl text-[#303030] `}
         >
           <Link href={"/"}>
             <a

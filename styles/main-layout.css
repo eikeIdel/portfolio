@@ -7,12 +7,9 @@
 
 .header {
   order: 1;
-  height: 3rem;
-  margin-bottom: -3rem;
-  background: #9ec1a3;
-  display: flex;
-  align-items: center;
-  justify-content: start;
+
+  /* display: flex;
+  align-items: center; */
 }
 
 .header-subcontainer {
@@ -54,6 +51,7 @@
     border-radius: 20px;
     margin-top: 2rem;
     margin-left: 2rem;
+
     z-index: 10;
     background: #9ec1a3;
     box-shadow: inset 4px 4px 20px rgba(0, 0, 0, 0.1);

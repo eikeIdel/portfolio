@@ -1,10 +1,18 @@
 //react
 import { createContext, useState, useEffect } from "react";
 
-function GlobalProvider({ children }) {
-  const GlobalContext = createContext();
+export const GlobalContext = createContext({});
 
-  return <GlobalContext.Provider value={{}} />;
+export default function GlobalProvider({ children }) {
+  const [project, setProject] = useState("start");
+  return (
+    <GlobalContext.Provider
+      value={{
+        project,
+        setProject,
+      }}
+    >
+      {children}
+    </GlobalContext.Provider>
+  );
 }
-
-export default GlobalProvider;

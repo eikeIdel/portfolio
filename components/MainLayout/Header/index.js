@@ -28,6 +28,7 @@ function Header() {
       <div className={`header-subcontainer `}>
         <div
           className={`h-full flex items-center divide-x-2 bg-[#9ec1a3] divide-[#303030] ${burgerAnimation} sm:bg-transparent sm:text-xl text-[#303030] `}
+          onClick={() => setOpen(false)}
         >
           <Link href={"/"}>
             <a

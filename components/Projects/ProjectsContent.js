@@ -1,7 +1,10 @@
-import React from "react";
+import { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalProvider";
 
 function ProjectsContent() {
-  return <div>ProjectsContent</div>;
+  const { project } = useContext(GlobalContext);
+
+  return <div>current project is: {project}</div>;
 }
 
 export default ProjectsContent;

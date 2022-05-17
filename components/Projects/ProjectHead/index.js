@@ -7,14 +7,14 @@ import { useSpring, animated } from "react-spring";
 
 function ProjectHead() {
   //states
-  const [toggle, setToggle] = useState(false);
+  const [initialVisit, setInitialVisit] = useState();
   //contect
   const { project, setProject } = useContext(GlobalContext);
   //initial load
   useEffect(() => {
-    setToggle((t) => !t);
-    console.log(n);
-  }, [n]);
+    localStorage.getItem("initialVisit") !== "false" && setInitialVisit(true);
+    localStorage.setItem("initialVisit", "false");
+  }, []);
 
   function handleClick(projectName) {
     setProject(projectName);
@@ -33,9 +33,11 @@ function ProjectHead() {
         <p className="text-[#005500]" onClick={() => handleClick("start")}>
           {project}
         </p>
-        <animated.div style={styles} className="ml-2 text-xs text-gray-600">
-          {"<--"} click here to change project
-        </animated.div>
+        {initialVisit && (
+          <animated.div style={styles} className="ml-2 text-xs text-gray-600">
+            {"<--"} click here to change project
+          </animated.div>
+        )}
       </div>
       <div className="h-full"></div>
     </div>

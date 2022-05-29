@@ -21,7 +21,7 @@ export default function useClientWindow() {
     handleResize();
 
     return () => {
-      window.removeEventListener("resise", handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   // console.log(clientWindow);
